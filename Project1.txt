@@ -1,0 +1,260 @@
+interface fa0/0
+ip address 195.168.10.254 255.255.255.0
+no shut
+do wr
+exit
+interface se2/0
+ip address 192.168.20.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se3/0
+ip address 192.168.30.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se6/0
+ip address 192.168.40.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se7/0
+ip address 192.168.50.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se8/0
+ip address 192.168.60.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+
+------------------------------------------------------
+interface fa0/0
+ip address 192.168.11.254 255.255.255.0
+no shut
+do wr
+exit
+interface se1/0
+ip address 192.168.20.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/1
+ip address 192.168.70.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se1/2
+ip address 192.168.80.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se1/3
+ip address 192.168.90.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se1/4
+ip address 192.168.100.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+-------------------------------------------------------
+interface fa0/0
+ip address 192.168.12.254 255.255.255.0
+no shut
+do wr
+exit
+interface se1/0
+ip address 192.168.30.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/1
+ip address 192.168.70.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/2
+ip address 192.168.101.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se1/3
+ip address 192.168.102.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se1/4
+ip address 192.168.103.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+-----------------------------------------------------------
+interface fa0/0
+ip address 192.168.13.254 255.255.255.0
+no shut
+do wr
+exit
+interface se1/0
+ip address 192.168.40.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/1
+ip address 192.168.80.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/2
+ip address 192.168.101.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/3
+ip address 192.168.104.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+interface se1/4
+ip address 192.168.105.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+------------------------------------------------------------------
+interface fa0/0
+ip address 192.168.14.254 255.255.255.0
+no shut
+do wr
+exit
+interface se1/0
+ip address 192.168.50.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/1
+ip address 192.168.90.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/2
+ip address 192.168.102.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/3
+ip address 192.168.104.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/4
+ip address 192.168.106.1 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+--------------------------------------------------
+interface fa0/0
+ip address 192.168.15.254 255.255.255.0
+no shut
+do wr
+exit
+interface se1/0
+ip address 192.168.60.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/1
+ip address 192.168.100.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/2
+ip address 192.168.103.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/3
+ip address 192.168.105.2 255.255.255.0
+no shut
+do wr
+exit
+interface se1/4
+ip address 192.168.106.2 255.255.255.0
+no shut
+do wr
+exit
+------------------------------------------------------------------
+____________________________________________________________________
+
+router ospf 1
+network 192.168.10.0 0.0.0.255 area 1
+network 192.168.20.0 0.0.0.255 area 1
+network 192.168.30.0 0.0.0.255 area 1
+network 192.168.40.0 0.0.0.255 area 1
+network 192.168.50.0 0.0.0.255 area 1
+network 192.168.60.0 0.0.0.255 area 1
+
+
+
+router ospf 2
+network 192.168.11.0 0.0.0.255 area 1
+network 192.168.20.0 0.0.0.255 area 1
+network 192.168.70.0 0.0.0.255 area 1
+network 192.168.80.0 0.0.0.255 area 1
+network 192.168.90.0 0.0.0.255 area 1
+network 192.168.100.0 0.0.0.255 area 1
+
+
+
+router ospf 3
+network 192.168.12.0 0.0.0.255 area 1
+network 192.168.30.0 0.0.0.255 area 1
+network 192.168.70.0 0.0.0.255 area 1
+network 192.168.101.0 0.0.0.255 area 1
+network 192.168.102.0 0.0.0.255 area 1
+network 192.168.103.0 0.0.0.255 area 1
+
+
+
+router ospf 4
+network 192.168.13.0 0.0.0.255 area 1
+network 192.168.40.0 0.0.0.255 area 1
+network 192.168.80.0 0.0.0.255 area 1
+network 192.168.101.0 0.0.0.255 area 1
+network 192.168.104.0 0.0.0.255 area 1
+network 192.168.105.0 0.0.0.255 area 1
+
+
+
+router ospf 5
+network 192.168.14.0 0.0.0.255 area 1
+network 192.168.50.0 0.0.0.255 area 1
+network 192.168.90.0 0.0.0.255 area 1
+network 192.168.102.0 0.0.0.255 area 1
+network 192.168.104.0 0.0.0.255 area 1
+network 192.168.106.0 0.0.0.255 area 1
+
+
+router ospf 6
+network 192.168.15.0 0.0.0.255 area 1
+network 192.168.60.0 0.0.0.255 area 1
+network 192.168.100.0 0.0.0.255 area 1
+network 192.168.103.0 0.0.0.255 area 1
+network 192.168.105.0 0.0.0.255 area 1
+network 192.168.106.0 0.0.0.255 area 1
